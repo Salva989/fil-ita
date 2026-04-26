@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@400;500;700;800&display=swap');
+
 :root {
   --bg: #120f0d;
   --panel: rgba(29, 23, 20, 0.78);
@@ -53,7 +55,8 @@ body::before {
 
 .topbar,
 .section,
-.footer {
+.footer,
+.status-card {
   backdrop-filter: blur(20px);
 }
 
@@ -75,7 +78,8 @@ body::before {
 .brand,
 .hero h1,
 .section h2,
-.payment-card h3 {
+.payment-card h3,
+.status-card h1 {
   font-family: "Abril Fatface", serif;
   letter-spacing: 0.02em;
 }
@@ -141,10 +145,10 @@ body::before {
 
 .lead,
 .payment-copy p,
-.section-heading h2 + p,
 .benefits-grid p,
 .film-card p,
-.footer p {
+.footer p,
+.status-card p {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -282,7 +286,9 @@ body::before {
 .benefits-grid article,
 .payment-card,
 .spotlight,
-.section {
+.section,
+.status-card,
+.status-box {
   background: var(--panel);
   border: 1px solid var(--line);
 }
@@ -308,7 +314,8 @@ body::before {
 
 .section-heading h2,
 .spotlight h2,
-.payment-copy h2 {
+.payment-copy h2,
+.status-card h1 {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1;
@@ -386,7 +393,8 @@ body::before {
 }
 
 .benefits-grid article,
-.payment-card {
+.payment-card,
+.status-card {
   padding: 22px;
   border-radius: 24px;
 }
@@ -405,16 +413,33 @@ body::before {
   gap: 12px;
 }
 
-.payment-card li {
+.payment-card li,
+.status-box {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding-bottom: 12px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.payment-card span {
+.payment-card span,
+.status-box span {
   color: var(--muted);
+}
+
+.status-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.status-card {
+  width: min(680px, 100%);
+}
+
+.success-card {
+  box-shadow: 0 30px 80px rgba(248, 184, 78, 0.12);
 }
 
 .footer {
@@ -467,7 +492,8 @@ body::before {
 
   .section,
   .topbar,
-  .footer {
+  .footer,
+  .status-card {
     padding: 20px;
   }
 

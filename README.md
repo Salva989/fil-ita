@@ -1,42 +1,69 @@
 # Film Ita
 
-Landing page iniziale per **Film Ita**, progetto pensato per raccogliere in un unico posto i film gratuiti disponibili online.
+Base progetto **Next.js** per Film Ita, con landing page premium e struttura pronta per **Stripe Checkout** e **Supabase**.
 
-## Contenuto iniziale
+## Stack
 
-- landing page statica elegante e pronta da mostrare
-- direzione visual premium-cinema, dark editorial
-- sezione hero, film in evidenza, vantaggi e blocco pagamento
-- note sul flusso checkout suggerito
+- Next.js App Router
+- React
+- Stripe Checkout
+- Supabase
 
-## File inclusi
+## Pagine incluse
 
-- `index.html`
-- `styles.css`
-- `package.json`
+- `/` landing page
+- `/checkout` demo checkout page
+- `/success` pagina post pagamento
+- `/api/stripe/webhook` placeholder webhook
 
 ## Avvio locale
+
+1. Installa dipendenze
+
+```bash
+npm install
+```
+
+2. Crea il file ambiente
+
+```bash
+cp .env.example .env.local
+```
+
+3. Avvia il progetto
 
 ```bash
 npm run dev
 ```
 
-Poi apri `http://localhost:3000`.
+Apri poi `http://localhost:3000`.
 
-## Materiale di partenza usato
+## Variabili ambiente
 
-- mockup testuale della homepage
-- descrizione prodotto Film Ita
-- note sul pagamento e stack consigliato
-- file `youtube-film-ita-300-results.md` presente nel workspace come riferimento catalogo
+Compila `.env.local` con:
+
+- `NEXT_PUBLIC_SITE_URL`
+- `STRIPE_SECRET_KEY`
+- `STRIPE_WEBHOOK_SECRET`
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+## Stato attuale
+
+- design landing completato
+- base checkout pronta
+- webhook placeholder pronto
+- helper Supabase pronto
+- catalogo markdown incluso come materiale di partenza
 
 ## Prossimi step consigliati
 
-1. trasformare la landing in Next.js
-2. collegare Stripe Checkout
-3. aggiungere Supabase per auth e accesso utenti
-4. importare il catalogo reale dei film
+1. collegare un prodotto Stripe reale
+2. creare tabella utenti o membership su Supabase
+3. gestire magic link login
+4. importare e rendere navigabile il catalogo film
+5. aggiungere dashboard privata per utenti paganti
 
 ## Nota importante
 
-Verifica attentamente compliance legale, termini d’uso delle fonti linkate e modalità di distribuzione prima della pubblicazione pubblica del servizio.
+Prima della pubblicazione, verifica bene compliance legale, termini d’uso delle fonti e monetizzazione del servizio.
