@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Film Ita | Film gratuiti online in un unico posto",
+  title: "Film Ita | Film in italiano online, ordinati e facili da trovare",
   description:
-    "Landing page Film Ita con accesso a vita, pagamento una tantum e base pronta per Stripe e Supabase.",
+    "Film Ita raccoglie una selezione di film in italiano disponibili online, con accesso per sempre e una navigazione semplice da mobile e desktop.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
